@@ -10,7 +10,7 @@ class Cart:
 
     @classmethod 
     def from_json(cls, json_data):
-        # Class method to create an instance of OrderData from JSON data
+        # Class method to create an instance of Cart from JSON data
         # 'cls' refers to the class itself, used to create a new instance
         return cls(
             json_data.get('cart_value', 0), #Expected to be an integer
@@ -20,7 +20,7 @@ class Cart:
         )
 
     def to_dict(self):
-        # Method to convert the OrderData object to a dictionary helpful for JSON conversion because JSON can only contain string keys. Also, it is good for validation for example, if you want to check if a key exists in the JSON data, you can check if the key exists in the dictionary.
+        # Method to convert the Cart object to a dictionary helpful for JSON conversion because JSON can only contain string keys. Also, it is good for validation for example, if you want to check if a key exists in the JSON data, you can check if the key exists in the dictionary.
         # 'self' is used to access the attributes of the current instance
         return {
             "cart_value": self.cart_value,
