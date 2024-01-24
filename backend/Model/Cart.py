@@ -18,13 +18,3 @@ class Cart:
             json_data.get('number_of_items', 0),
             json_data.get('time', '') #Expected to be a string
         )
-
-    def to_dict(self):
-        # Method to convert the Cart object to a dictionary helpful for JSON conversion because JSON can only contain string keys. Also, it is good for validation for example, if you want to check if a key exists in the JSON data, you can check if the key exists in the dictionary.
-        # 'self' is used to access the attributes of the current instance
-        return {
-            "cart_value": self.cart_value,
-            "delivery_distance": self.delivery_distance,
-            "number_of_items": self.number_of_items,
-            "time": self.time
-        }
