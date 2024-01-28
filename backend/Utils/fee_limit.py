@@ -25,5 +25,5 @@ def calc_fee_limit(total_fee: int, value: int):
         return total_fee
 
 
-    print("Total fee is not greater than 15€ amd value < 200€. Return total fee: " + str(round(float(total_fee), 2)))
+    print("Total fee is not greater than 15€ and value < 200€. Return total fee: " + str(round(float(total_fee), 2)))
     return total_fee

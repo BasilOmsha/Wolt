@@ -21,7 +21,8 @@ def calc_items_count_fee(items: int):
     bulk_surcharge = 1.2 # 1.2€
 
     # Calculate the additional items beyond the threshold
-    # if it is negative, additional_items = 0, which means the number of items is less than the threshold   
+    # if it is negative, additional_items = 0, which means the number of items is less than the threshold
+    # max function returns the largest of the given items. If result is negative, we set it to 0 then return it.   
     additional_items = max(0, items - threshold)
     print("Additional items: " + str(additional_items)) # for debugging
 
