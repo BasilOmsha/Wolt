@@ -30,7 +30,7 @@ def calc_time_fee(deliv_date: str, total: int):
         if start_time <= delivery_time <= end_time: #
             print("It is between 15:00 and 19:00 UTC")
             rush_surcharge = total * 1.2 # 20% surcharge
-            print(f'Adding 20% to total fee when day is Friday (UTC) and time between 15 and 19. {total}.(1.2) = ' + str(round(float(rush_surcharge), 2)))
+            print(f'Adding 20% to total fee when day is Friday and time between 15 and 19 (UTC). {total}.(1.2) = ' + str(round(float(rush_surcharge), 2)))
             return rush_surcharge
     
     return total
